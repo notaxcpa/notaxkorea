@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고객사례 | NOTAX 세무회계</title>
+    <title>고객사례 | 인일회계법인 NOTAX</title>
     <meta name="description" content="NOTAX와 함께 성장한 고객사례. 법인·개인·창업·절세성공 사례를 업종별로 확인하세요.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/notaxkorea/css/style.css">
 </head>
 <body>
 <div id="header"></div>
 <main>
-    <!-- 헤더 -->
     <section class="hero">
         <div class="container">
             <div class="hero-badge"><i class="fas fa-medal"></i> 신뢰의 증거, NOTAX 고객사례</div>
@@ -21,7 +20,6 @@
         </div>
     </section>
 
-    <!-- 성과 수치 배너 -->
     <div class="container" style="margin-top: -40px;">
         <div class="stats-grid">
             <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">누적 고객사</div></div>
@@ -31,87 +29,66 @@
         </div>
     </div>
 
-    <!-- 필터 탭 -->
     <section>
         <div class="container">
-            <div class="filter-buttons" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px;">
-                <button class="filter-btn active" data-filter="all">전체</button>
-                <button class="filter-btn" data-filter="corporate">법인사업자</button>
-                <button class="filter-btn" data-filter="sole">개인사업자</button>
-                <button class="filter-btn" data-filter="startup">창업·스타트업</button>
-                <button class="filter-btn" data-filter="tax">절세 성공</button>
-            </div>
-            <div class="case-grid" id="caseGrid">
-                <!-- 사례 1 - 법인 -->
-                <div class="case-card" data-category="corporate">
+            <div class="case-grid">
+                <div class="case-card">
                     <i class="fas fa-building"></i>
                     <h3>송도 제조법인 A사</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">법인사업자</span> <span class="badge">제조업</span></div>
                     <p>법인세 신고 최적화, 세무조정을 통해 연간 1,200만원 절세. 3년 연속 재계약 중.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"회계사님이 직접 챙겨주셔서 믿음이 갑니다."</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case1">사례 자세히 보기 →</a>
                 </div>
-                <!-- 사례 2 - 개인 -->
-                <div class="case-card" data-category="sole">
+                <div class="case-card">
                     <i class="fas fa-store"></i>
                     <h3>연수구 편의점 B점</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">개인사업자</span> <span class="badge">도소매업</span></div>
                     <p>종합소득세 신고 시 누락된 경비 2,300만원 찾아 300만원 환급.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"꼼꼼하게 챙겨주셔서 너무 감사합니다."</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case2">사례 자세히 보기 →</a>
                 </div>
-                <!-- 사례 3 - 창업/스타트업 -->
-                <div class="case-card" data-category="startup">
+                <div class="case-card">
                     <i class="fas fa-rocket"></i>
                     <h3>남동구 스타트업 C사</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">창업</span> <span class="badge">IT</span></div>
                     <p>창업 세무설계부터 법인전환, 투자 유치까지 원스톱 지원. 벤처인증 세액공제 혜택 확보.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"덕분에 투자 유치에 성공했습니다!"</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case3">사례 자세히 보기 →</a>
                 </div>
-                <!-- 사례 4 - 절세 성공 -->
-                <div class="case-card" data-category="tax">
+                <div class="case-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>부평구 물류법인 D사</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">법인사업자</span> <span class="badge">절세 성공</span></div>
                     <p>법인차량 운행기록부 작성, 접대비 한도 최적화로 연 2,000만원 추가 절세.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"세금 부담이 확 줄었어요."</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case4">사례 자세히 보기 →</a>
                 </div>
-                <!-- 사례 5 - 법인 -->
-                <div class="case-card" data-category="corporate">
+                <div class="case-card">
                     <i class="fas fa-chart-line"></i>
                     <h3>송도 바이오기업 E사</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">법인사업자</span> <span class="badge">연구개발</span></div>
                     <p>연구개발비 세액공제, 중간예납 최적화로 법인세 3,500만원 절감.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"전문가의 힘을 느꼈습니다."</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case5">사례 자세히 보기 →</a>
                 </div>
-                <!-- 사례 6 - 개인 -->
-                <div class="case-card" data-category="sole">
+                <div class="case-card">
                     <i class="fas fa-hand-peace"></i>
                     <h3>남동구 프리랜서 F씨</h3>
                     <div class="tag" style="margin: 8px 0;"><span class="badge">개인사업자</span> <span class="badge">프리랜서</span></div>
                     <p>필요경비 누락 복원, 세무조정으로 종소세 150만원 환급.</p>
                     <div class="testimonial" style="margin-top: 16px; font-style: italic;">"이제는 세금 걱정 없이 일에 집중해요."</div>
-                    <a href="#" class="naver-blog-link btn-sm" data-category="case6">사례 자세히 보기 →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 하단 CTA -->
     <section style="background: var(--gray-bg); text-align: center;">
         <div class="container">
             <h2 class="section-title">내 업종의 사례를 상담받고 싶다면?</h2>
             <div class="cta-group" style="justify-content: center;">
-                <a href="contact.html" class="btn-primary"><i class="fas fa-headset"></i> 무료 상담 신청</a>
-                <a href="#" class="btn-outline naver-blog-link" data-category="blog-main"><i class="fas fa-download"></i> 전체 사례집 받기</a>
+                <a href="/notaxkorea/contact.html" class="btn-primary"><i class="fas fa-headset"></i> 무료 상담 신청</a>
+                <a href="https://blog.naver.com/notaxcpa" target="_blank" class="btn-outline" rel="noopener noreferrer"><i class="fas fa-download"></i> 전체 사례집 받기</a>
             </div>
         </div>
     </section>
 </main>
 <div id="footer"></div>
-<script src="js/main.js"></script>
+<script src="/notaxkorea/js/main.js"></script>
 </body>
 </html>
