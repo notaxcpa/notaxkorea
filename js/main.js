@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHTML = `
     <header>
         <div class="container header-inner">
-            <div class="logo">NOTAX <span>세무회계</span></div>
+            <div class="logo">NOTAX</div>
             <div class="menu-toggle"><i class="fas fa-bars"></i></div>
             <nav>
                 <a href="/notaxkorea/index.html">홈</a>
