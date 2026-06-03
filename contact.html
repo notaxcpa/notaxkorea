@@ -2,101 +2,212 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>무료 상담 신청 | 인일회계법인 NOTAX</title>
-    <meta name="description" content="24시간 이내 회계사가 직접 연락드립니다. 이름, 연락처, 업종, 매출 규모 등을 남겨주세요.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>무료 상담 신청 | NOTAX 세무회계</title>
+    <meta name="description" content="회계사가 직접 상담하고 꼼꼼하게 관리하는 NOTAX 세무회계. 인천 남동구·연수구·송도 법인기장, 개인사업자 기장, 창업 세무상담 전문.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/notaxkorea/css/style.css">
+    <style>
+        /* 상담 섹션 전용 스타일 */
+        .contact-section {
+            padding: 60px 0 80px;
+            background: #fff;
+        }
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 48px;
+            justify-content: space-between;
+        }
+        .contact-form-box {
+            flex: 1.5;
+            background: #fff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+            border: 1px solid #eef2ff;
+            padding: 40px;
+        }
+        .contact-info-box {
+            flex: 1;
+            background: #f8fafc;
+            border-radius: 28px;
+            padding: 40px;
+        }
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .form-subtitle {
+            color: #4b5563;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #1e4a76;
+            box-shadow: 0 0 0 3px rgba(30,74,118,0.1);
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background: white;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #1e293b;
+            border: 1px solid #eef2ff;
+            transition: 0.2s;
+        }
+        .contact-link:hover {
+            background: #1e4a76;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .map-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-radius: 60px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #1e293b;
+            border: 1px solid #eef2ff;
+            cursor: pointer;
+        }
+        .btn-submit {
+            width: 100%;
+            background: #1e4a76;
+            color: white;
+            padding: 14px;
+            border-radius: 40px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        @media (max-width: 768px) {
+            .contact-wrapper { flex-direction: column; }
+            .contact-form-box, .contact-info-box { padding: 24px; }
+        }
+    </style>
 </head>
 <body>
 <div id="header"></div>
 <main>
-    <section class="hero">
+    <section class="contact-section">
         <div class="container">
-            <div class="hero-badge"><i class="fas fa-headset"></i> 24시간 이내 회계사가 직접 연락드립니다</div>
-            <h1>무료 세무 상담 신청</h1>
-            <p>부담 없이 먼저 물어보세요. 상담 후 계약은 선택입니다.</p>
-        </div>
-    </section>
-
-    <div class="container" style="margin-top: -40px;">
-        <div class="stats-grid" style="padding: 24px; gap: 32px;">
-            <div class="stat-item"><i class="fas fa-handshake" style="font-size: 2rem; color: var(--primary);"></i><div class="stat-label">상담 후 계약 부담 없음</div></div>
-            <div class="stat-item"><i class="fas fa-clock" style="font-size: 2rem; color: var(--primary);"></i><div class="stat-label">24시간 이내 응답</div></div>
-            <div class="stat-item"><i class="fas fa-user-tie" style="font-size: 2rem; color: var(--primary);"></i><div class="stat-label">회계사 직접 상담</div></div>
-        </div>
-    </div>
-
-    <section>
-        <div class="container">
-            <div class="contact-form">
-                <form id="taxContactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="이름 *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="연락처 *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="이메일 (선택)">
-                    </div>
-                    <div class="form-row">
-                        <select name="industry">
-                            <option value="">업종 선택</option>
-                            <option>제조업</option><option>도소매업</option><option>서비스업</option>
-                            <option>건설업</option><option>프리랜서</option><option>기타</option>
-                        </select>
-                        <select name="revenue">
-                            <option value="">연간 매출 규모</option>
-                            <option>1억 미만</option><option>1억~5억</option>
-                            <option>5억~10억</option><option>10억 이상</option>
-                        </select>
-                        <select name="businessType">
-                            <option value="">사업자 형태</option>
-                            <option>개인사업자</option><option>법인사업자</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="employees" placeholder="직원 수 (선택)">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="4" placeholder="구체적인 고민이나 문의사항을 남겨주세요. (선택)"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width:100%">무료 상담 신청</button>
-                </form>
-                <div class="contact-direct" style="text-align:center; margin-top: 24px;">
-                    <p><i class="fas fa-phone-alt"></i> 010-8676-3827 &nbsp;|&nbsp; <i class="fas fa-envelope"></i> notaxcpa@naver.com</p>
-                    <p class="small">※ 상담 신청 시 회계사가 24시간 이내 직접 연락드립니다.</p>
+            <div class="contact-wrapper">
+                <!-- 왼쪽: 상담 신청 폼 -->
+                <div class="contact-form-box">
+                    <h2 class="form-title">지금 바로 상담 신청</h2>
+                    <p class="form-subtitle">매출·업종·직원 수를 알려주시면 더 정확하게 안내드립니다.</p>
+                    
+                    <form id="taxContactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="이름 *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="연락처 (숫자만 입력) *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="이메일">
+                        </div>
+                        <div class="form-row">
+                            <select name="industry">
+                                <option value="">업종 선택</option>
+                                <option>제조업</option><option>도소매업</option><option>서비스업</option>
+                                <option>건설업</option><option>프리랜서</option><option>기타</option>
+                            </select>
+                            <select name="revenue">
+                                <option value="">연간 매출 규모</option>
+                                <option>1억 미만</option><option>1억~5억</option>
+                                <option>5억~10억</option><option>10억 이상</option>
+                            </select>
+                            <select name="businessType">
+                                <option value="">사업자 형태</option>
+                                <option>개인사업자</option><option>법인사업자</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="employees" placeholder="직원 수 (선택)">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="4" placeholder="구체적인 고민이나 문의사항을 남겨주세요. (선택)"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">📋 무료 상담 신청</button>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section style="background: var(--gray-bg);">
-        <div class="container">
-            <h2 class="section-title">빠르게 연결되는 채널</h2>
-            <div class="card-grid">
-                <div class="card"><i class="fas fa-phone-alt"></i><h3>전화 상담</h3><p>010-8676-3827</p><a href="tel:01086763827" class="btn-sm">바로걸기 →</a></div>
-                <div class="card"><i class="fas fa-envelope"></i><h3>이메일</h3><p>notaxcpa@naver.com</p><a href="mailto:notaxcpa@naver.com" class="btn-sm">메일 보내기 →</a></div>
-                <div class="card"><i class="fab fa-kakaotalk"></i><h3>카카오톡</h3><p>NOTAX 세무회계 채널 추가</p><a href="#" class="naver-blog-link btn-sm" data-category="blog-main">채널 연결 →</a></div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2 class="section-title">내방 상담 예약</h2>
-            <div class="map-placeholder" style="background: #e2e8f0; border-radius: 24px; padding: 48px 24px; text-align: center;">
-                <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--primary); margin-bottom: 16px;"></i>
-                <h3>인천광역시 남동구 예술로 123, 4층</h3>
-                <p> (남동구청역 2번 출구 도보 5분)</p>
-                <a href="https://map.naver.com/v5/search/인천 남동구 예술로 123" target="_blank" class="btn-sm" style="margin-top: 16px;" rel="noopener noreferrer">네이버 지도로 보기 →</a>
+                <!-- 오른쪽: 연락처 및 지도 정보 -->
+                <div class="contact-info-box">
+                    <h3 style="font-size:1.4rem; margin-bottom:12px;">📞 빠른 상담은?</h3>
+                    <div class="contact-buttons">
+                        <a href="tel:01086763827" class="contact-link">
+                            <span>📞</span> 010-8676-3827
+                        </a>
+                        <a href="sms:01086763827" class="contact-link">
+                            <span>💬</span> 문자로 상담 신청하기
+                        </a>
+                        <a href="mailto:notaxcpa@naver.com" class="contact-link">
+                            <span>✉️</span> notaxcpa@naver.com
+                        </a>
+                        <button class="map-banner" onclick="openNaverMap()">
+                            <span>📍</span> 인천 남동구 남동대로 217 한국산업단지공단 5층
+                            <span>▶</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </main>
 <div id="footer"></div>
+<script>
+    document.getElementById('taxContactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = this.querySelector('input[name="name"]')?.value;
+        const phone = this.querySelector('input[name="phone"]')?.value;
+        if (!name || !phone) {
+            alert('이름과 연락처는 필수 입력 항목입니다.');
+            return;
+        }
+        alert(`✅ 상담 신청이 접수되었습니다.\n📞 ${phone}\n회계사가 24시간 이내 직접 연락드립니다.`);
+        this.reset();
+    });
+    function openNaverMap() {
+        window.open('https://map.naver.com/v5/search/인천 남동구 남동대로 217', '_blank');
+    }
+</script>
 <script src="/notaxkorea/js/main.js"></script>
 </body>
 </html>
